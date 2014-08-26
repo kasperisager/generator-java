@@ -1,0 +1,21 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath group: "net.carlosgsouza", name: "gradle-console", version: "1.x"
+  }
+}
+
+apply plugin: "java"
+apply plugin: "checkstyle"
+apply plugin: "console"
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testCompile group: "junit", name: "junit", version: "4.+"
+}

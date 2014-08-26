@@ -1,0 +1,38 @@
+{
+  "name": "generator-java",
+  "version": "0.0.0",
+  "description": "Generic Java generator with Gradle, JUnit, Groovy Console, and Checkstyle support.",
+  "license": "MIT",
+  "main": "generators/app/index.js",
+  "repository": "kasperisager/generator-java",
+  "author": {
+    "name": "Kasper Isager",
+    "email": "kasperisager@gmail.com",
+    "url": "https://github.com/kasperisager"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "generators/app",
+    "generators/class",
+    "generators/interface"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.17.0",
+    "chalk": "^0.5.0",
+    "yosay": "^0.3.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}
