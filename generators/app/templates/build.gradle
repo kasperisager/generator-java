@@ -4,11 +4,12 @@ buildscript {
   }
 
   dependencies {
-    classpath group: "net.carlosgsouza", name: "gradle-console", version: "1.x"
+    classpath group: "net.carlosgsouza", name: "gradle-console", version: "1.+"
   }
 }
 
 apply plugin: "java"
+apply plugin: "application"
 apply plugin: "checkstyle"
 apply plugin: "console"
 
@@ -19,3 +20,5 @@ repositories {
 dependencies {
   testCompile group: "junit", name: "junit", version: "4.+"
 }
+
+mainClassName = "<% if (props.namespace) { %><%= props.namespace %>.<% } %>Main"

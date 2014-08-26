@@ -15,20 +15,30 @@ var JavaGenerator = yeoman.generators.Base.extend({
     ));
 
     var prompts = [{
-      type: 'input',
-      name: 'author',
-      message: 'What\'s your name?',
-      default: this.config.get('author')
+      type: 'input'
+    , name: 'title'
+    , message: 'Name your project'
+    , default: this.config.get('title')
     }, {
-      type: 'input',
-      name: 'email',
-      message: 'What\'s your email?',
-      default: this.config.get('email')
+      type: 'input'
+    , name: 'description'
+    , message: 'What\'s your project about? (optional)'
+    , default: this.config.get('description')
     }, {
-      type: 'input',
-      name: 'namespace',
-      message: 'Choose a package namespace (optional)',
-      default: this.config.get('namespace')
+      type: 'input'
+    , name: 'author'
+    , message: 'What\'s your name?'
+    , default: this.config.get('author')
+    }, {
+      type: 'input'
+    , name: 'email'
+    , message: 'What\'s your email?'
+    , default: this.config.get('email')
+    }, {
+      type: 'input'
+    , name: 'namespace'
+    , message: 'Choose a package namespace (optional)'
+    , default: this.config.get('namespace')
     }];
 
     this.prompt(prompts, function (props) {
@@ -43,6 +53,10 @@ var JavaGenerator = yeoman.generators.Base.extend({
   configuring: function () {
     this.copy('editorconfig', '.editorconfig');
     this.copy('gitignore', '.gitignore');
+  },
+
+  default: function () {
+    this.template('README.md');
   },
 
   writing: {
@@ -64,6 +78,10 @@ var JavaGenerator = yeoman.generators.Base.extend({
 
   end: function () {
     this.config.save();
+
+    this.invoke('java:class', {
+      args: ['Main']
+    });
   }
 });
 
