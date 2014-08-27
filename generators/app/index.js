@@ -27,7 +27,7 @@ var JavaGenerator = yeoman.generators.Base.extend({
       type: 'input'
     , name: 'title'
     , message: 'Name your project'
-    , default: this.config.get('title')
+    , default: this.config.get('title') || this._.titleize(this.determineAppname())
     }, {
       type: 'input'
     , name: 'description'
