@@ -1,4 +1,6 @@
-# generator-java [![Build Status](https://secure.travis-ci.org/kasperisager/generator-java.png?branch=master)](https://travis-ci.org/kasperisager/generator-java)
+# generator-java
+
+[![Release](http://img.shields.io/npm/v/generator-java.svg?style=flat)](https://www.npmjs.org/package/generator-java) [![Build Status](http://img.shields.io/travis/kasperisager/generator-java.svg?style=flat)](https://travis-ci.org/kasperisager/generator-java) [![Coverage Status](http://img.shields.io/coveralls/kasperisager/generator-java.svg?style=flat)](https://coveralls.io/r/kasperisager/generator-java) [![Code Climate](http://img.shields.io/codeclimate/github/kasperisager/generator-java.svg?style=flat)](https://codeclimate.com/github/kasperisager/generator-java) [![Dependency Status](http://img.shields.io/gemnasium/kasperisager/generator-java.svg?style=flat)](https://gemnasium.com/kasperisager/generator-java) [![Downloads](http://img.shields.io/npm/dm/generator-java.svg?style=flat)](https://www.npmjs.org/package/generator-java)
 
 > [Yeoman](http://yeoman.io) generator
 
