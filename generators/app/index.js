@@ -9,6 +9,7 @@ var JavaGenerator = yeoman.generators.Base.extend({
   prompting: function () {
     var done = this.async();
 
+    /* istanbul ignore if */
     if (!this.options['skip-intro']) {
       // Have Yeoman greet the user.
       this.log(yosay(
