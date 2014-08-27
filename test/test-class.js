@@ -39,6 +39,5 @@ describe('java:class', function () {
       , 'src/test/java/namespace/ClassTest.java'
       ]);
     });
-
   });
 });
