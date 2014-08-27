@@ -6,6 +6,12 @@ var util   = require('util')
   , yosay  = require('yosay');
 
 var JavaGenerator = yeoman.generators.Base.extend({
+  constructor: function () {
+    yeoman.generators.Base.apply(this, arguments);
+
+    this.desc('Generate a basic Java project with Gradle build automation.');
+  },
+
   prompting: function () {
     var done = this.async();
 

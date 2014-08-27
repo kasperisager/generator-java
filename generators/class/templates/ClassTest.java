@@ -9,5 +9,5 @@ package <%= props.namespace %><% if (props.package) { %><%= props.package %><% }
  * @author  <%= props.author %><% if (props.email) { %> <<%= props.email %>><% } %>
  * @version 1.0.0
  */
-<%= options.visibility || 'public' %> class <%= _.classify(props.name) %>Test {
+<%= options.visibility %> class <%= _.classify(props.name) %>Test {
 }

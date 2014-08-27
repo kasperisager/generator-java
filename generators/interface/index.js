@@ -5,6 +5,18 @@ var util   = require('util')
   , yeoman = require('yeoman-generator');
 
 var InterfaceGenerator = yeoman.generators.NamedBase.extend({
+  constructor: function () {
+    yeoman.generators.Base.apply(this, arguments);
+
+    this.desc('Generate an empty Java interface. Supports optional namespacing through dot-notation.');
+
+    this.argument('name', {
+      desc: 'Name of the interface in Pascal case.'
+    , required: true
+    , type: String
+    });
+  },
+
   initializing: function () {
     var parts = this.name.split('.')
       , name  = parts.pop();
