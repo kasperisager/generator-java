@@ -9,7 +9,9 @@ describe('java:app', function () {
     helpers.run(path.join(__dirname, '../generators/app'))
       .inDir(path.join(__dirname, '../.tmp/app'))
       .withPrompt({
-        author: 'John Doe'
+        title: 'Awesome Project'
+      , description: 'This is an awesome project!'
+      , author: 'John Doe'
       , email: 'john@example.com'
       , namespace: false
       })
@@ -20,6 +22,7 @@ describe('java:app', function () {
     assert.file([
       '.editorconfig'
     , '.gitignore'
+    , 'README.md'
     , 'build.gradle'
     , 'src/main/java/package-info.java'
     , 'src/test/java/package-info.java'
