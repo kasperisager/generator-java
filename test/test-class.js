@@ -5,19 +5,40 @@ var path    = require('path')
   , helpers = require('yeoman-generator').test;
 
 describe('java:class', function () {
-  before(function (done) {
-    helpers.run(path.join(__dirname, '../generators/class'))
-      .inDir(path.join(__dirname, '../.tmp/class'))
-      .withArguments([
-        'Class'
-      ])
-      .on('end', done);
+  describe('non-namespaced generation', function () {
+    before(function (done) {
+      helpers.run(path.join(__dirname, '../generators/class'))
+        .inDir(path.join(__dirname, '../.tmp/class'))
+        .withArguments([
+          'Class'
+        ])
+        .on('end', done);
+    });
+
+    it('creates expected files', function () {
+      assert.file([
+        'src/main/java/Class.java'
+      , 'src/test/java/ClassTest.java'
+      ]);
+    });
   });
 
-  it('creates expected files', function () {
-    assert.file([
-      'src/main/java/Class.java'
-    , 'src/test/java/ClassTest.java'
-    ]);
+  describe('namespaced generation', function () {
+    before(function (done) {
+      helpers.run(path.join(__dirname, '../generators/class'))
+        .inDir(path.join(__dirname, '../.tmp/class'))
+        .withArguments([
+          'namespace.Class'
+        ])
+        .on('end', done);
+    });
+
+    it('creates expected files', function () {
+      assert.file([
+        'src/main/java/namespace/Class.java'
+      , 'src/test/java/namespace/ClassTest.java'
+      ]);
+    });
+
   });
 });
