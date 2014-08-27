@@ -12,7 +12,7 @@ describe('java:app', function () {
   describe('non-namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/app'))
-        .inDir(path.join(__dirname, '../.tmp/app'))
+        .inDir(path.join(__dirname, '../.tmp/app/non-namespaced'))
         .withGenerators(deps)
         .withOptions({
           'skip-intro': true
@@ -42,7 +42,7 @@ describe('java:app', function () {
   describe('namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/app'))
-        .inDir(path.join(__dirname, '../.tmp/app'))
+        .inDir(path.join(__dirname, '../.tmp/app/namespaced'))
         .withGenerators(deps)
         .withOptions({
           'skip-intro': true

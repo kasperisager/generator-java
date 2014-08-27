@@ -8,7 +8,7 @@ describe('java:interface', function () {
   describe('non-namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/interface'))
-        .inDir(path.join(__dirname, '../.tmp/interface'))
+        .inDir(path.join(__dirname, '../.tmp/interface/non-namespaced'))
         .withArguments([
           'Interface'
         ])
@@ -25,7 +25,7 @@ describe('java:interface', function () {
   describe('namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/interface'))
-        .inDir(path.join(__dirname, '../.tmp/interface'))
+        .inDir(path.join(__dirname, '../.tmp/interface/namespaced'))
         .withArguments([
           'namespace.Interface'
         ])

@@ -8,7 +8,7 @@ describe('java:class', function () {
   describe('non-namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/class'))
-        .inDir(path.join(__dirname, '../.tmp/class'))
+        .inDir(path.join(__dirname, '../.tmp/class/non-namespaced'))
         .withArguments([
           'Class'
         ])
@@ -26,7 +26,7 @@ describe('java:class', function () {
   describe('namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/class'))
-        .inDir(path.join(__dirname, '../.tmp/class'))
+        .inDir(path.join(__dirname, '../.tmp/class/namespaced'))
         .withArguments([
           'namespace.Class'
         ])
