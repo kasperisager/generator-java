@@ -76,15 +76,17 @@ var JavaGenerator = yeoman.generators.Base.extend({
 
     build: function () {
       this.template('build.gradle');
+    },
+
+    classes: function () {
+      this.composeWith('java:class', {
+        args: ['Main']
+      });
     }
   },
 
   end: function () {
     this.config.save();
-
-    this.composeWith('java:class', {
-      args: ['Main']
-    });
   }
 });
 
