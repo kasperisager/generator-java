@@ -14,6 +14,9 @@ describe('java:app', function () {
       helpers.run(path.join(__dirname, '../generators/app'))
         .inDir(path.join(__dirname, '../.tmp/app'))
         .withGenerators(deps)
+        .withOptions({
+          'skip-intro': true
+        })
         .withPrompt({
           title: 'Awesome Project'
         , description: 'This is an awesome project!'
@@ -45,6 +48,9 @@ describe('java:app', function () {
       helpers.run(path.join(__dirname, '../generators/app'))
         .inDir(path.join(__dirname, '../.tmp/app'))
         .withGenerators(deps)
+        .withOptions({
+          'skip-intro': true
+        })
         .withPrompt({
           title: 'Awesome Project'
         , description: 'This is an awesome project!'

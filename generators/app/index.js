@@ -9,10 +9,12 @@ var JavaGenerator = yeoman.generators.Base.extend({
   prompting: function () {
     var done = this.async();
 
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the wonderful Java generator!'
-    ));
+    if (!this.options['skip-intro']) {
+      // Have Yeoman greet the user.
+      this.log(yosay(
+        'Welcome to the wonderful Java generator!'
+      ));
+    }
 
     var prompts = [{
       type: 'input'
