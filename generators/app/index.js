@@ -32,7 +32,7 @@ var JavaGenerator = yeoman.generators.Base.extend({
       type: 'input'
     , name: 'description'
     , message: 'What\'s your project about? (optional)'
-    , default: this.config.get('description')
+    , default: this.config.get('description') || null
     }, {
       type: 'input'
     , name: 'author'
@@ -52,7 +52,6 @@ var JavaGenerator = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function (props) {
       this.props = props;
-
       this.config.set(props);
 
       done();
