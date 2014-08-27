@@ -5,7 +5,7 @@ var path    = require('path')
   , helpers = require('yeoman-generator').test;
 
 describe('java:class', function () {
-  describe('non-namespaced generation', function () {
+  describe('non-namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/class'))
         .inDir(path.join(__dirname, '../.tmp/class'))
@@ -23,7 +23,7 @@ describe('java:class', function () {
     });
   });
 
-  describe('namespaced generation', function () {
+  describe('namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/class'))
         .inDir(path.join(__dirname, '../.tmp/class'))

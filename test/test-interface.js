@@ -5,7 +5,7 @@ var path    = require('path')
   , helpers = require('yeoman-generator').test;
 
 describe('java:interface', function () {
-  describe('non-namespaced generation', function () {
+  describe('non-namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/interface'))
         .inDir(path.join(__dirname, '../.tmp/interface'))
@@ -22,7 +22,7 @@ describe('java:interface', function () {
     });
   });
 
-  describe('namespaced generation', function () {
+  describe('namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/interface'))
         .inDir(path.join(__dirname, '../.tmp/interface'))

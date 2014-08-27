@@ -9,7 +9,7 @@ describe('java:app', function () {
     [helpers.createDummyGenerator(), 'java:class']
   ];
 
-  describe('non-namespaced generation', function () {
+  describe('non-namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/app'))
         .inDir(path.join(__dirname, '../.tmp/app'))
@@ -39,7 +39,7 @@ describe('java:app', function () {
     });
   });
 
-  describe('namespaced generation', function () {
+  describe('namespaced', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/app'))
         .inDir(path.join(__dirname, '../.tmp/app'))

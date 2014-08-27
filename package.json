@@ -14,7 +14,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "istanbul cover _mocha && cat ./coverage/lcov.info | coveralls"
   },
   "files": [
     "generators/app",
@@ -30,7 +30,10 @@
     "yosay": "0.3.x"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "istanbul": "*",
+    "coveralls": "*",
+    "mocha-lcov-reporter": "*"
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
