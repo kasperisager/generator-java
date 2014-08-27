@@ -5,11 +5,11 @@ var path    = require('path')
   , helpers = require('yeoman-generator').test;
 
 describe('java:app', function () {
-  describe('non-namespaced generation', function () {
-    var deps = [
-      [helpers.createDummyGenerator(), 'java:class']
-    ];
+  var deps = [
+    [helpers.createDummyGenerator(), 'java:class']
+  ];
 
+  describe('non-namespaced generation', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/app'))
         .inDir(path.join(__dirname, '../.tmp/app'))
@@ -40,10 +40,6 @@ describe('java:app', function () {
   });
 
   describe('namespaced generation', function () {
-    var deps = [
-      [helpers.createDummyGenerator(), 'java:class']
-    ];
-
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/app'))
         .inDir(path.join(__dirname, '../.tmp/app'))
