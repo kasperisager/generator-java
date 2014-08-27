@@ -10,9 +10,13 @@ var InterfaceGenerator = yeoman.generators.NamedBase.extend({
       , name  = parts.pop();
 
     this.props = this.config.getAll();
-    this.props.package = (this.props.namespace ? '.' : '') + parts.join('.');
+    this.props.package = parts.join('.');
     this.props.dir = parts.join('/');
     this.props.name = name;
+
+    if (this.props.package) {
+      this.props.package = (this.props.namespace ? '.' : '') + this.props.package;
+    }
   },
 
   writing: function () {
