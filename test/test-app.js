@@ -6,9 +6,14 @@ var path    = require('path')
 
 describe('java:app', function () {
   describe('non-namespaced generation', function () {
+    var deps = [
+      [helpers.createDummyGenerator(), 'java:class']
+    ];
+
     before(function (done) {
       helpers.run(path.join(__dirname, '../generators/app'))
         .inDir(path.join(__dirname, '../.tmp/app'))
+        .withGenerators(deps)
         .withPrompt({
           title: 'Awesome Project'
         , description: 'This is an awesome project!'

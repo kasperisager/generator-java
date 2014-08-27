@@ -79,7 +79,7 @@ var JavaGenerator = yeoman.generators.Base.extend({
   end: function () {
     this.config.save();
 
-    this.invoke('java:class', {
+    this.composeWith('java:class', {
       args: ['Main']
     });
   }
