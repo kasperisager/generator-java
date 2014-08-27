@@ -19,7 +19,7 @@ describe('java:app', function () {
         .on('end', done);
     });
 
-    it('creates expected files', function (done) {
+    it('creates expected files', function () {
       assert.file([
         '.editorconfig'
       , '.gitignore'
