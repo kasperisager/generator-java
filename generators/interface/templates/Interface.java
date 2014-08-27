@@ -1,7 +1,7 @@
 /**
  * Copyright (C) <%= new Date().getFullYear() %> <%= props.author %>.
  */
-package <%= props.namespace %><% if (props.package) { %>.<%= props.package %><% } %>;
+package <%= props.namespace %><% if (props.package) { %><%= props.package %><% } %>;
 
 /**
  * <%= _.humanize(props.name) %> interface.

@@ -10,7 +10,7 @@ var ClassGenerator = yeoman.generators.NamedBase.extend({
       , name  = parts.pop();
 
     this.props = this.config.getAll();
-    this.props.package = parts.join('.');
+    this.props.package = (this.props.namespace ? '.' : '') + parts.join('.');
     this.props.dir = parts.join('/');
     this.props.name = name;
   },
