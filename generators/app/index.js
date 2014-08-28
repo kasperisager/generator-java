@@ -63,11 +63,11 @@ var JavaGenerator = yeoman.generators.Base.extend({
     this.copy('gitignore', '.gitignore');
   },
 
-  default: function () {
-    this.template('README.md');
-  },
-
   writing: {
+    readme: function () {
+      this.template('README.md');
+    },
+
     config: function () {
       this.directory('config');
     },
