@@ -26,6 +26,7 @@
   ],
   "dependencies": {
     "chalk": "0.5.x",
+    "superb": "1.x.x",
     "yeoman-generator": "0.17.x",
     "yosay": "1.x.x"
   },

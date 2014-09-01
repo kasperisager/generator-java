@@ -3,7 +3,8 @@
 var util   = require('util')
   , path   = require('path')
   , yeoman = require('yeoman-generator')
-  , yosay  = require('yosay');
+  , yosay  = require('yosay')
+  , superb = require('superb');
 
 var JavaGenerator = yeoman.generators.Base.extend({
   constructor: function () {
@@ -19,7 +20,7 @@ var JavaGenerator = yeoman.generators.Base.extend({
     if (!this.options['skip-intro']) {
       // Have Yeoman greet the user.
       this.log(yosay(
-        'Welcome to the wonderful Java generator!'
+        'Welcome to the ' + superb() + ' Java generator!'
       ));
     }
 
