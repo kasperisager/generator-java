@@ -8,7 +8,7 @@ var ClassGenerator = yeoman.generators.NamedBase.extend({
   constructor: function () {
     yeoman.generators.Base.apply(this, arguments);
 
-    this.desc('Generate an empty Java class. Supports optional namespacing through dot-notation.');
+    this.desc('Generate an empty Java class and unit test. Supports optional namespacing through dot-notation.');
 
     this.option('visibility', {
       desc: 'Specify the class visibility'
