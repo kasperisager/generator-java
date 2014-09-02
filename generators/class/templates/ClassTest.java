@@ -3,6 +3,8 @@
  */
 package <%= props.namespace %><% if (props.package) { %><%= props.package %><% } %>;
 
+import org.junit.Test;
+
 /**
  * <%= _.humanize(props.name) %> class unit test.
  *
