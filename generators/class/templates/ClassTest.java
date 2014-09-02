@@ -4,7 +4,7 @@
 package <%= props.namespace %><% if (props.package) { %><%= props.package %><% } %>;
 
 /**
- * <%= _.humanize(props.name) %> class unit tests.
+ * <%= _.humanize(props.name) %> class unit test.
  *
  * @version 1.0.0
  */
