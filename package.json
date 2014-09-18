@@ -31,9 +31,9 @@
     "yosay": "1.x.x"
   },
   "devDependencies": {
-    "mocha": "*",
-    "istanbul": "*",
     "coveralls": "*",
+    "istanbul": "*",
+    "mocha": "*",
     "mocha-lcov-reporter": "*"
   },
   "peerDependencies": {
