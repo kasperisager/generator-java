@@ -21,6 +21,10 @@ var InterfaceGenerator = yeoman.generators.NamedBase.extend({
     var parts = this.name.split('.')
       , name  = parts.pop();
 
+    this.config.defaults({
+      author: '<your name>'
+    });
+
     this.props = this.config.getAll();
     this.props.package = parts.join('.');
     this.props.dir = parts.join('/');
