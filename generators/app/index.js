@@ -29,6 +29,9 @@ var JavaGenerator = yeoman.generators.Base.extend({
     , name: 'title'
     , message: 'Name your project'
     , default: this.config.get('title') || this._.titleize(this.determineAppname())
+    , validate: function (input) {
+        return input ? true : false;
+      }
     }, {
       type: 'input'
     , name: 'description'
@@ -39,11 +42,17 @@ var JavaGenerator = yeoman.generators.Base.extend({
     , name: 'author'
     , message: 'What\'s your name?'
     , default: this.config.get('author')
+    , validate: function (input) {
+        return input ? true : false;
+      }
     }, {
       type: 'input'
     , name: 'email'
     , message: 'What\'s your email?'
     , default: this.config.get('email')
+    , validate: function (input) {
+        return input ? true : false;
+      }
     }, {
       type: 'input'
     , name: 'namespace'
