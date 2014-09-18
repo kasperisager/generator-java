@@ -1,10 +1,11 @@
 'use strict';
 
-var util   = require('util')
-  , path   = require('path')
-  , yeoman = require('yeoman-generator')
-  , yosay  = require('yosay')
-  , superb = require('superb');
+var util      = require('util')
+  , path      = require('path')
+  , yeoman    = require('yeoman-generator')
+  , yosay     = require('yosay')
+  , validator = require('validator')
+  , superb    = require('superb');
 
 var JavaGenerator = yeoman.generators.Base.extend({
   constructor: function () {
@@ -51,13 +52,13 @@ var JavaGenerator = yeoman.generators.Base.extend({
     , message: 'What\'s your email?'
     , default: this.config.get('email')
     , validate: function (input) {
-        return input ? true : false;
+        return validator.isEmail(input);
       }
     }, {
       type: 'input'
     , name: 'namespace'
     , message: 'Choose a package namespace (optional)'
-    , default: this.config.get('namespace')
+    , default: this.config.get('namespace') || null
     }];
 
     this.prompt(prompts, function (props) {
