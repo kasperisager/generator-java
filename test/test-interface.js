@@ -19,6 +19,10 @@ describe('java:interface', function () {
       assert.file([
         'src/main/java/Interface.java'
       ]);
+
+      assert.noFileContent([
+        ['src/main/java/Interface.java', /package ;/]
+      ]);
     });
   });
 
@@ -35,6 +39,10 @@ describe('java:interface', function () {
     it('creates expected files', function () {
       assert.file([
         'src/main/java/namespace/Interface.java'
+      ]);
+
+      assert.fileContent([
+        ['src/main/java/namespace/Interface.java', /package namespace;/]
       ]);
     });
   });

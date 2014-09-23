@@ -20,6 +20,11 @@ describe('java:class', function () {
         'src/main/java/Class.java'
       , 'src/test/java/ClassTest.java'
       ]);
+
+      assert.noFileContent([
+        ['src/main/java/Class.java', /package ;/]
+      , ['src/test/java/ClassTest.java', /package ;/]
+      ]);
     });
   });
 
@@ -37,6 +42,11 @@ describe('java:class', function () {
       assert.file([
         'src/main/java/namespace/Class.java'
       , 'src/test/java/namespace/ClassTest.java'
+      ]);
+
+      assert.fileContent([
+        ['src/main/java/namespace/Class.java', /package namespace;/]
+      , ['src/test/java/namespace/ClassTest.java', /package namespace;/]
       ]);
     });
   });
