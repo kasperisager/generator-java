@@ -1,7 +1,6 @@
 'use strict';
 
-var util   = require('util')
-  , path   = require('path')
+var path   = require('path')
   , yeoman = require('yeoman-generator');
 
 var ClassGenerator = yeoman.generators.NamedBase.extend({
