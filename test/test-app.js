@@ -36,6 +36,11 @@ describe('java:app', function () {
       , 'src/main/java/package-info.java'
       , 'src/test/java/package-info.java'
       ]);
+
+      assert.noFileContent([
+        ['src/main/java/package-info.java', /package ;/]
+      , ['src/test/java/package-info.java', /package ;/]
+      ]);
     });
   });
 
@@ -61,6 +66,11 @@ describe('java:app', function () {
       assert.file([
         'src/main/java/com/example/package-info.java'
       , 'src/test/java/com/example/package-info.java'
+      ]);
+
+      assert.fileContent([
+        ['src/main/java/com/example/package-info.java', /package com.example;/]
+      , ['src/test/java/com/example/package-info.java', /package com.example;/]
       ]);
     });
   });
