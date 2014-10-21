@@ -57,20 +57,20 @@ describe('java:app', function () {
         , description: 'This is an awesome project!'
         , author: 'John Doe'
         , email: 'john@example.com'
-        , namespace: 'com.example'
+        , namespace: 'com.example.project'
         })
         .on('end', done);
     });
 
     it('creates expected files', function () {
       assert.file([
-        'src/main/java/com/example/package-info.java'
-      , 'src/test/java/com/example/package-info.java'
+        'src/main/java/com/example/project/package-info.java'
+      , 'src/test/java/com/example/project/package-info.java'
       ]);
 
       assert.fileContent([
-        ['src/main/java/com/example/package-info.java', /package com.example;/]
-      , ['src/test/java/com/example/package-info.java', /package com.example;/]
+        ['src/main/java/com/example/project/package-info.java', /package com.example.project;/]
+      , ['src/test/java/com/example/project/package-info.java', /package com.example.project;/]
       ]);
     });
   });

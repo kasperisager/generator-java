@@ -31,18 +31,18 @@ describe('java:interface', function () {
       helpers.run(path.join(__dirname, '../generators/interface'))
         .inDir(path.join(__dirname, '../.tmp/interface/namespaced'))
         .withArguments([
-          'namespace.Interface'
+          'namespace.project.Interface'
         ])
         .on('end', done);
     });
 
     it('creates expected files', function () {
       assert.file([
-        'src/main/java/namespace/Interface.java'
+        'src/main/java/namespace/project/Interface.java'
       ]);
 
       assert.fileContent([
-        ['src/main/java/namespace/Interface.java', /package namespace;/]
+        ['src/main/java/namespace/project/Interface.java', /package namespace.project;/]
       ]);
     });
   });

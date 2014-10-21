@@ -35,7 +35,7 @@ var InterfaceGenerator = yeoman.generators.NamedBase.extend({
   },
 
   writing: function () {
-    var namespace = (this.props.namespace || '').replace('.', '\/');
+    var namespace = (this.props.namespace || '').replace(/\./g, '/');
 
     this.template('Interface.java', path.join('src/main/java', namespace, this.props.dir, this.props.name + '.java'));
   }

@@ -33,20 +33,20 @@ describe('java:class', function () {
       helpers.run(path.join(__dirname, '../generators/class'))
         .inDir(path.join(__dirname, '../.tmp/class/namespaced'))
         .withArguments([
-          'namespace.Class'
+          'namespace.project.Class'
         ])
         .on('end', done);
     });
 
     it('creates expected files', function () {
       assert.file([
-        'src/main/java/namespace/Class.java'
-      , 'src/test/java/namespace/ClassTest.java'
+        'src/main/java/namespace/project/Class.java'
+      , 'src/test/java/namespace/project/ClassTest.java'
       ]);
 
       assert.fileContent([
-        ['src/main/java/namespace/Class.java', /package namespace;/]
-      , ['src/test/java/namespace/ClassTest.java', /package namespace;/]
+        ['src/main/java/namespace/project/Class.java', /package namespace.project;/]
+      , ['src/test/java/namespace/project/ClassTest.java', /package namespace.project;/]
       ]);
     });
   });

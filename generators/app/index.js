@@ -83,7 +83,7 @@ var JavaGenerator = yeoman.generators.Base.extend({
     },
 
     meta: function () {
-      var namespace = (this.props.namespace || '').replace('.', '\/');
+      var namespace = (this.props.namespace || '').replace(/\./g, '/');
 
       this.template('package-info.java', path.join('src/main/java', namespace, 'package-info.java'));
       this.template('package-info.java', path.join('src/test/java', namespace, 'package-info.java'));
