@@ -1,6 +1,6 @@
 {
   "name": "generator-java",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generic Java generator with Gradle, JUnit, Groovy Console, and Checkstyle support.",
   "license": "MIT",
   "main": "generators/app/index.js",
