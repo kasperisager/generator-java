@@ -19,6 +19,7 @@
   "files": [
     "generators/app",
     "generators/class",
+    "generators/enum",
     "generators/interface"
   ],
   "keywords": [
