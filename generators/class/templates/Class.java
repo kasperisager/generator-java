@@ -5,8 +5,6 @@ package <% if (props.namespace) { %><%= props.namespace %><% } %><% if (props.pa
 
 /**
  * <%= _.humanize(props.name) %> class.
- *
- * @version 1.0.0
  */
-<%= options.visibility %> class <%= _.classify(props.name) %> {
+<%= options.visibility %> class <%= props.name %> {
 }

@@ -8,8 +8,6 @@ import org.junit.*;
 
 /**
  * <%= _.humanize(props.name) %> class unit tests.
- *
- * @version 1.0.0
  */
-<%= options.visibility %> class <%= _.classify(props.name) %>Test {
+<%= options.visibility %> class <%= props.name %>Test {
 }

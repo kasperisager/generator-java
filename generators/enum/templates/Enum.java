@@ -5,8 +5,6 @@ package <% if (props.namespace) { %><%= props.namespace %><% } %><% if (props.pa
 
 /**
  * <%= _.humanize(props.name) %> enumerator.
- *
- * @version 1.0.0
  */
-public enum <%= _.classify(props.name) %> {
+public enum <%= props.name %> {
 }
